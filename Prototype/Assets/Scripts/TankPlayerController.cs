@@ -20,14 +20,14 @@ public class TankPlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        horizontalInput = Input.GetAxis("Horizaontal");
+        //Get Input - Do this in Update()
+        horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
         //Move Player forward with vertical Input
         transform.Translate(Vector2.right * Time.deltaTime * speed * verticalInput);
 
         //Rotate player with horizontal Input
-        transform.Rotate(Vector3.forward, turnSpeed * Time.deltaTime * horizontalInput);
+        transform.Rotate(Vector3.back, turnSpeed * Time.deltaTime * horizontalInput);
     }
 }
