@@ -12,6 +12,7 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
 
     public TMP_Text textbox;
+    public int scoreToWin;
     void Start()
     {
         gameOver = false;
@@ -26,7 +27,7 @@ public class ScoreManager : MonoBehaviour
         {
             textbox.text = "Score: " + score;
         }
-        if (score >= 3)
+        if (score >= scoreToWin)
         {
             won = true;
             gameOver = true;
